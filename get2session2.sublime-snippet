@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[get2session2(${2:programa},${3:\$array});]]></content>
+    <tabTrigger>get2session2</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Get2Session Mauser"…"</description>
+</snippet>

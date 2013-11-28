@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[lupabox(${1:\$url},${2:\$label});]]></content>
+    <tabTrigger>lupabox</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Lupabox Mauser"…"</description>
+</snippet>

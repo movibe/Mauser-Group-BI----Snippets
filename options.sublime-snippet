@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[options(${1:\$nome},${2:\$valores},${3:\$atual},${4:\$modulo},${5:'class'});]]></content>
+    <tabTrigger>options</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Folder2 Mauser"…"</description>
+</snippet>

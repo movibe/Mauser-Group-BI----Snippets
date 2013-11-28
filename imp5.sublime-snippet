@@ -1,0 +1,16 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+// SOMAR TOTAL
+for (\$i=0; \$i < count(\$impostos_tabela[\$imposto]['colunas']); \$i++) { 
+  \$tipo = \$impostos_tabela[\$imposto]['tipo'][\$i];
+  \$valor = \$impostos_tabela[\$imposto]['valores'][\$i];                   
+  \$total[\$valor]             += \$linha[\$valor];
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>imp5</tabTrigger>
+  <description>Imposto 5</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

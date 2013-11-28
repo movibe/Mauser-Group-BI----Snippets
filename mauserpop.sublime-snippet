@@ -1,0 +1,44 @@
+<snippet>
+    <content><![CDATA[<?
+/**
+ * MAUSER GROUP BRASIL
+ *
+ * @copyright Mauser Group
+ * @license Comercial
+ *
+ * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
+ * @package Mauser BI 2.0
+ */
+
+
+require 'includes/session_security-inc.php';
+require 'includes/sys_funcs-inc.php';
+\$conexao = new ConexaoMauser(\$_SESSION['base']);
+
+// Extrair valores em variaveis \$
+extract( \$_SESSION );
+extract( \$_GET );
+
+// Titulo da Página
+\$header_subtitle = "${1:Pagina} " ;
+
+// Caminho
+\$caminho = array('#' => 'Caminho', 
+				 '2' => \$header_subtitle);
+
+// Gerar caminho BreadCrumb
+require DIR."header_pop.php";
+gerBread( json_encode(\$caminho) );
+
+?>
+<h3 class="heading"><?=\$header_subtitle?></h3>
+
+${2:Codigo}
+
+<?
+require DIR. 'footer_pop.php';
+?>]]></content>
+    <tabTrigger>mauserpop</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Notabox Mauser"…"</description>
+</snippet>

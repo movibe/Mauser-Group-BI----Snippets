@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[<script type="text/javascript">
+	\$('.sorting').each(function(i){
+		var coluna = \$(this).attr('aria-label');
+		// Aplica a cor de fundo
+		\$(this).addClass(coluna);
+	});
+
+	\$('.folder').each(function(i){
+		var folder = \$(this).attr('folder');
+		\$(this).parents('tr').addClass(folder);
+
+		<?  if ( !\$coluna=='' ) {  ?>
+
+		\$(this).attr('coluna','<?=\$coluna?>');
+		\$(this).attr('ordem','<?=\$ordem?>');
+		<?  } ?>
+	});
+</script>]]></content>
+    <tabTrigger>scriptms</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

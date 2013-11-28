@@ -1,0 +1,14 @@
+<snippet>
+  <!-- Example: Hello, \${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+// PORCENTAGBEM
+foreach (\$impostos as \$valor) {
+    \$total['PERC_'.strtoupper(\$valor)]   = @(\$total['VALOR_'.strtoupper(\$valor)] / \$total['BASE_'.strtoupper(\$valor)] * 100);
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>imp6</tabTrigger>
+  <description>Imposto 6</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

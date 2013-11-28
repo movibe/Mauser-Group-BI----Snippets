@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[calendar(${1:'nome'},${2:\$atual},${3:'class=visao,outro'},${4:'required=true,false'})]]></content>
+    <tabTrigger>calendar</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Folder2 Mauser"…"</description>
+</snippet>
+snip

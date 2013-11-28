@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[\$conexao->mysql2json("${1:SELECT * FROM }");]]></content>
+    <tabTrigger>mysql2json</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>SQL Conexão Mauser"…"</description>
+</snippet>

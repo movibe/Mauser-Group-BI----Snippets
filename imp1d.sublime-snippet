@@ -1,0 +1,17 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[";
+
+for (\$i=0; \$i < count(\$impostos_tabela[\$imposto]['colunas']); \$i++) { 
+    \$query .= \$impostos_tabela[\$imposto]['mysql_detalhe'][\$i].",";
+}
+\$query = substr(\$query, 0,-1);
+
+\$query .=" 
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>imp1d</tabTrigger>
+  <description>Imposto 1 Detalhe</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

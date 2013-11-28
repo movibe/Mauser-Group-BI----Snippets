@@ -1,0 +1,63 @@
+<snippet>
+    <content><![CDATA[<?
+/**
+ * MAUSER GROUP BRASIL
+ *
+ * @copyright Mauser Group
+ * @license Comercial
+ *
+ * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
+ * @package Mauser BI 2.0
+ */
+
+// Requires
+require 'includes/session_security-inc.php';
+require 'includes/sys_funcs-inc.php';
+\$conexao = new ConexaoMauser(\$_SESSION['base']);
+require "$1_functions.php";
+
+// Define Left Menu in DB
+\$_SESSION['menu']='$2';
+
+// Extracts
+extract( \$_SESSION );
+extract( \$_GET );
+
+// Ativar menu esquerdo
+\$sidetap = true;
+
+// Page Title
+\$header_subtitle = "$3";
+
+// Create Interface Header
+require DIR."header.php";
+
+// Create BreadCrumb Array 
+\$menu = array(
+	"Home"=> "/",
+	"$4 Report"=> "reports/$5/",
+	"Dashboard"=> "reports/$6/$7_00.php",
+	"\$header_subtitle"=> ""
+);
+
+// Function Create BreadCrumb
+gerBread( \$menu );
+?>
+<!-- Header Page -->
+<h3 class="heading"><?=\$header_subtitle?> <? include '$8_subtitle.php'; ?></h3>
+<!-- Tabs in Ajax -->
+<ul class="mytabs" id="tabs">
+	<li <?=tab( 0, \$aba )?>><a href="$9.php">Dashboard</a></li>
+	<li <?=tab( 1, \$aba )?>><a href="$10.php">Month</a></li>
+ </ul>
+<!-- Content for Ajax  -->
+<div class="mytabs-container" id="tabs-container"></div>
+<?
+// End Interface Footer
+require DIR . 'footer.php';
+?>
+]]></content>
+    <tabTrigger>mauseraba</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

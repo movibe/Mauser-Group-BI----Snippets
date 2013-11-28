@@ -1,0 +1,11 @@
+<snippet>
+  <!-- Example: Hello, \${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+<th colspan=<?=count(\$impostos_tabela[\$imposto]['colunas'])?> class=''><?=\$impostos[\$imposto]?></th>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>imp2</tabTrigger>
+  <description>Imposto 2</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

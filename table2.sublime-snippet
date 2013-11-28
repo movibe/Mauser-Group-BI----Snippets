@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[table.table.table-striped.table-bordered.model${1:numero}[url='<?=info_filename();?>']>thead(tr>th.sorting[aria-sort="ASC" aria-label=""]*${2:quantidade})+tbody>(tr>td.left*${3:quantitade})]]></content>
+    <tabTrigger>table1</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

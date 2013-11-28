@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[// Sistema de Order By para filhos
+if ( !\$coluna=='' ) {
+	\$orderby = "ORDER BY \$coluna \$ordem";
+} else {
+	\$orderby = "ORDER BY $0 ASC";
+}]]></content>
+    <tabTrigger>orderby</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Orderby Mauser"…"</description>
+</snippet>

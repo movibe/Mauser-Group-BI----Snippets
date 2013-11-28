@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[tab(${1:numero_da_aba},${2:\$aba});]]></content>
+    <tabTrigger>tab</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

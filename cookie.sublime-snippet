@@ -1,0 +1,9 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[\$.cookie('${1:var}',${2:valor});]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>cookie</tabTrigger>
+  <description>Cookie js</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>cookie_js.js</scope> -->
+</snippet>

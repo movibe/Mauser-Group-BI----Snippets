@@ -1,0 +1,17 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+if (\$cst == 'NA') {
+        \$cst_select = "A.CST_".strtoupper(\$imposto)." IS NULL"; 
+} else if (\$cst == 'blank') { 
+        \$cst_select = "A.CST_".strtoupper(\$imposto)." = ''"; 
+} else {
+        \$cst_select = "A.CST_".strtoupper(\$imposto)." = '\$ncm'";
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>imp0</tabTrigger>
+  <description>Imposto Select</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

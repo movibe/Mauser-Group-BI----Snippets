@@ -1,0 +1,49 @@
+<snippet>
+    <content><![CDATA[<?
+/**
+ * MAUSER GROUP BRASIL
+ *
+ * @copyright Mauser Group
+ * @license Comercial
+ *
+ * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
+ * @package Mauser BI 2.0
+ */
+
+// Requires
+require 'includes/session_security-inc.php';
+require 'includes/sys_funcs-inc.php';
+\$conexao = new ConexaoMauser(\$_SESSION['base']);
+require 'sls_functions.php';
+
+
+// Extrair valores em variaveis \$
+extract( \$_SESSION );
+extract( \$_GET );
+
+// Sistema de Order By para filhos
+if ( !\$coluna=='' ) {
+	\$orderby = "ORDER BY \$coluna \$ordem";
+}  else {
+	\$orderby = "ORDER BY totfree_sales DESC";
+}
+
+//Special Filters4
+\$stp     = prep_list( \$sls_stp );
+\$key1    = prep_list( \$sls_k01 );
+\$key2    = prep_list( \$sls_k02 );
+
+
+//View Type definitions
+\$col_name = get_view_attr( \$sls_reg, \$sls_ctr, \$sls_env, \$sls_dom, \$sls_vwt, 'field_description' );
+\$col_desc = get_view_attr( \$sls_reg, \$sls_ctr, \$sls_env, \$sls_dom, \$sls_vwt, 'descr_formula' );
+\$formula  = get_view_attr( \$sls_reg, \$sls_ctr, \$sls_env, \$sls_dom, \$sls_vwt, 'formula' );
+\$col_calc = get_view_attr( \$sls_reg, \$sls_ctr, \$sls_env, \$sls_dom, \$sls_vwt, 'field_calc_description' );
+
+?>
+
+]]></content>
+    <tabTrigger>sls1</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

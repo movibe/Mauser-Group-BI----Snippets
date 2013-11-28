@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[\$mysqls[]="$1";]]></content>
+    <tabTrigger>mysqls</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

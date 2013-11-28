@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[quantity(${1:\$var})]]></content>
+    <tabTrigger>quantity</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Currency Mauser"…"</description>
+</snippet>

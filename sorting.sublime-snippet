@@ -1,0 +1,28 @@
+<snippet>
+    <content><![CDATA[<script type="text/javascript">
+	\$('.sorting').each(function(i){
+		var coluna = \$(this).attr('aria-label');
+		// Aplica a cor de fundo
+		\$(this).addClass(coluna);
+	});
+
+	\$('.folder').each(function(i){
+		var folder = \$(this).attr('folder');
+
+		// Aplica a cor de fundo
+
+		// var folder = \$(this).parents('tr').attr('aria-label');
+		// \$(this).parents('tr').attr('row',folder);
+		\$(this).parents('tr').addClass(folder);
+
+		<?  if ( !\$coluna=='' ) {  ?>
+
+		\$(this).attr('coluna','<?=\$coluna?>');
+		\$(this).attr('ordem','<?=\$ordem?>');
+		<?  } ?>
+	});
+</script>]]></content>
+    <tabTrigger>jssorting</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Orderby Mauser"…"</description>
+</snippet>

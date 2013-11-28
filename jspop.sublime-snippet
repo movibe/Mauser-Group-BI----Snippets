@@ -1,0 +1,22 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+<script>
+// popover demo
+    \$("a[rel=popover]")
+      .popover({
+      	delay: { show: 500, hide: 100 },
+      	html: "test.html",
+      	trigger: 'hover'
+      })
+      .click(function(e) {
+        // e.preventDefault()
+      })
+</script>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>jspop</tabTrigger>
+  <description>Ativar Pop Usuario</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

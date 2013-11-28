@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[\$conexao->mysql_insert(${1:'tabela'}, ${2:\$array_dados},${3:\$array_duplicate_key},${4:\$debug: false ou false});]]></content>
+    <tabTrigger>mysql_insert</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>SQL Conexão Mauser"…"</description>
+</snippet>

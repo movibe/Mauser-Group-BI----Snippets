@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[<a href="${1:#}" class="atip" data-placement="${2:top,left,right,bottom}" data-original-title="${3:titulo}" data-content="${4:html}">${5:label}</a>]]></content>
+    <!-- <content><![CDATA[lupabox(${1:\$url},${2:\$label});]]></content> -->
+    <tabTrigger>atip</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Lupabox Mauser"…"</description>
+</snippet>

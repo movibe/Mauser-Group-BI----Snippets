@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[notabox(${1:\$url});]]></content>
+    <tabTrigger>notabox</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Notabox Mauser"…"</description>
+</snippet>

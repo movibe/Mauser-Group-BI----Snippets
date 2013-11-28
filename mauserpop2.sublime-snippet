@@ -1,0 +1,55 @@
+<snippet>
+    <content><![CDATA[<?
+/**
+ * MAUSER GROUP BRASIL
+ *
+ * @copyright Mauser Group
+ * @license Comercial
+ *
+ * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
+ * @package Mauser BI 2.0
+ */
+
+
+require 'includes/session_security-inc.php';
+require 'includes/sys_funcs-inc.php';
+\$conexao = new ConexaoMauser(\$_SESSION['base']);
+
+// Extrair valores em variaveis \$
+extract( \$_SESSION );
+extract( \$_GET );
+
+// Titulo da Página
+\$header_subtitle = "${1:Pagina} " ;
+
+// Caminho
+\$caminho = array('#' => 'Caminho', 
+				 '2' => \$header_subtitle);
+
+// Gerar caminho BreadCrumb
+require DIR."header_pop.php";
+gerBread( json_encode(\$caminho) );
+
+?>
+<h3 class="heading"><?=\$header_subtitle?></h3>
+
+<!-- Tabs no Ajax -->
+<ul class="mytabs" id="tabs1">
+	<li <?=tab(0,\$aba);?>><a href="#tab1">${2:Aba1}</a></li>
+	<li <?=tab(1,\$aba);?>><a href="#tab3">${3:Aba2}</a>
+	<li <?=tab(2,\$aba);?>><a href="#tab2">${4:Ab3}</a></li>
+	</li>
+</ul>
+
+<div class="mytabs-container tab1 tabs" id="tab1">Aba1</div>
+<div class="mytabs-container tab2 tabs" id="tab2">Aba2</div>
+<div class="mytabs-container tab3 tabs" id="tab3">Aba3</div>
+
+
+<?
+require DIR. 'footer_pop.php';
+?>]]></content>
+    <tabTrigger>mauserpop2</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Notabox Mauser"…"</description>
+</snippet>

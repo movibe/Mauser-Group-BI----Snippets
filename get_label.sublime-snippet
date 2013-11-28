@@ -1,0 +1,9 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[get_label(${1:valor}, ${2:cod_id},${3:cod_type},${4:cod_field})]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>get_label</tabTrigger>
+  <description>Pegar Label pela COD_MSTR</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

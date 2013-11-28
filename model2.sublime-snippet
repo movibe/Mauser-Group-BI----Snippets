@@ -1,0 +1,90 @@
+<snippet>
+    <content><![CDATA[
+<script type="text/javascript">
+	\$('.sorting').each(function(i){
+		var coluna = \$(this).attr('aria-label');
+		// Aplica a cor de fundo
+		\$(this).addClass(coluna);
+	});
+
+	\$('.folder').each(function(i){
+		var folder = \$(this).attr('folder');
+		// Aplica a cor de fundo
+		\$(this).parents('tr').addClass(folder);
+
+		<?  if ( !\$coluna=='' ) {  ?>
+
+		\$(this).attr('coluna','<?=\$coluna?>');
+		\$(this).attr('ordem','<?=\$ordem?>');
+		<?  } ?>
+	});
+
+</script>
+
+<table class='table table-striped table-bordered zebra model2'  url='$1 .php'>
+<thead>
+  <tr>
+		<th class='sorting' aria-sort="ASC" aria-label="CODE">Code </th>
+        <th class='sorting' aria-sort="ASC" aria-label="NAME">Name </th>
+        <th class='sorting' aria-sort="ASC" aria-label="ADDRESS">Addres </th>
+        <th class='sorting' aria-sort="ASC" aria-label="CITY">City </th>
+        <th class='sorting' aria-sort="ASC" aria-label="STATE">St.</th>
+  </tr>
+
+</thead>
+	<tbody>
+	<?
+	\$sql = "$2 SELECT 	B.customer_grupo AS CODE,
+		B.description_short_grupo AS NAME,
+		AD_LINE1 AS ADDRESS,
+		AD_CITY AS CITY,
+		AD_STATE AS STATE,
+		SUM(totfree_sales) AS totfree_sales
+		FROM SLS_PA_02_CLI_GER AS A LEFT JOIN MDT_AD_MSTR AS B
+			ON 	A.region=B.code_region AND
+				A.country=B.code_country AND
+				A.environment=B.environment AND
+				A.domain=B.dom_domain AND
+		                        A.cm_addr=B.ad_addr
+				WHERE 	A.region='\$sls_reg' AND
+					A.country='\$sls_ctr' AND
+					A.environment='\$sls_env' AND
+					A.domain='\$sls_dom' AND
+					A.currency='\$sls_cur' AND
+					A.per='\$sls_mon' AND
+					A.year='\$sls_yea' AND
+					A.sales_type IN (\$stp) AND
+					A.key_1 IN (\$key1) AND
+					A.key_2 IN (\$key2)
+						GROUP BY CODE
+						\$orderby";
+
+	\$result = mysql_query( \$sql, \$conexao ) or die( mysql_error() );
+
+	while (\$row = mysql_fetch_array( \$result ) ) {
+		// Folder for down nivel
+		\$folder = \$row['CODE'];
+
+	?>
+		<tr id='pai' class='<?=\$row['CODE']?>'  >
+			<td class='left'>
+				<?=lupa( "sls_150_1_1.php?group=\$folder" )?>
+				<?=\$folder?>
+			</td>
+			<td class='left'> <?=\$row['NAME']?></td>
+			<td class='left'> <?=\$row['ADDRESS']?></td>
+			<td class='left'> <?=\$row['CITY']?></td>
+			<td class='left'> <?=\$row['STATE']?></td>
+		</tr>
+	<?
+		}
+	?>
+	</tbody>
+</table>
+
+<? include 'includes/debug.php';?>
+]]></content>
+    <tabTrigger>model2</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

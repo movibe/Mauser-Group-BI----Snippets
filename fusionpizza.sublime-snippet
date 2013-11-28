@@ -1,0 +1,51 @@
+<snippet>
+    <content><![CDATA[// ------------------------------------------------------------
+// Fusion Chart - Model Pizza
+// ------------------------------------------------------------					
+
+// Include Fusion Charts 
+include 'charts/includes/FusionCharts.php';
+
+// Montar Select 
+\$sqlPizza = "SELECT A.en_entity,
+				       B.entity_description,
+				       SUM(totfree_sales) AS totfree_sales
+				FROM SLS_PA_00 AS A
+				LEFT JOIN MDT_ENTITY AS B ON A.region=B.code_region
+				AND A.country=B.code_country
+				AND A.environment=B.environment
+				AND A.domain=B.dom_domain
+				AND A.en_entity=B.entity
+				WHERE A.region='\$sls_reg'
+				    AND A.country='\$sls_ctr'
+				    AND A.environment='\$sls_env'
+				    AND A.domain='\$sls_dom'
+				    AND A.currency='\$sls_cur'
+				    AND A.per='\$sls_mon'
+				    AND A.year='\$sls_yea'
+				    AND A.sales_type IN (\$stp)
+				    AND A.key_1 IN (\$key1)
+				    AND A.key_2 IN (\$key2)
+				GROUP BY A.en_entity";
+				// Executar Select
+\$pizzaResult = mysql_query(\$sqlPizza,\$conexao) or die(mysql_error()) ;
+
+// Verifica se tem valor		
+if (mysql_num_rows(\$pizzaResult) > 0){
+
+	// Cria o XML para o Fusion Chart
+	\$xml_data = "<chart caption='Sales By Business' showPercentValues='1'>";
+	// Loop para os Valores
+	while (\$Pizza = mysql_fetch_array(\$pizzaResult)) {				
+		\$xml_data .="<set label='".\$Pizza[0]." (".\$Pizza[1].")' value='".\$Pizza[2]."' />";
+	}
+	// Finaliza o XML Fusion Chart
+	\$xml_data .= "</chart>";
+	
+	//Chama a Função para Criar o Gráfico do Fusion Chart
+	echo renderChart("charts/Pie3D.swf", "",\$xml_data, "chart0", "800", "350");
+}]]></content>
+    <tabTrigger>fusionpizza</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Fusion Pizza Chart</description>
+</snippet>

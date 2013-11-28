@@ -1,0 +1,16 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+\$nome = \$linha['${1:variavel}'];
+if (is_null(\$nome)) {
+    \$nome='NA';
+ } else if(\$nome==''){
+    \$nome='blank';
+ }
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>impnull</tabTrigger>
+  <description>Imposto Is Null Validation</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

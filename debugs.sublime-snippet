@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[\$debugs[]="$1";]]></content>
+    <tabTrigger>debugs</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

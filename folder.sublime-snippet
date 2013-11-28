@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[folder(${1:url},${2:folder},${3:extra1},${4:extra2},${5:nivel});]]></content>
+    <tabTrigger>folder</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Folder Mauser"…"</description>
+</snippet>

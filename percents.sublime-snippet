@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[percents(${1:\$var})]]></content>
+    <tabTrigger>percents</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Currency Mauser"…"</description>
+</snippet>

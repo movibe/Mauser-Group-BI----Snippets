@@ -1,0 +1,9 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[drop_options(${1:'\$cod_id'},${2:'\$nome'},${3:\$atual},${4:'\$class'},${5:'\$order="DESC"'}]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>drop_options</tabTrigger>
+  <description>Criar Dropdown com a COD_MSTR</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

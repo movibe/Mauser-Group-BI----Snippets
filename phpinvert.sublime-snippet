@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[?>$0<?]]></content>
+    <tabTrigger>phps</tabTrigger>
+    <scope>source.php</scope>
+    <description>&lt;?php invert … ?&gt;</description>
+</snippet>

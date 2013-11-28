@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[<?
+/**
+ * MAUSER GROUP BRASIL
+ *
+ * @copyright Mauser Group
+ * @license Comercial
+ *
+ * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
+ * @package Mauser BI 2.0
+ */
+
+
+require 'includes/session_security-inc.php';
+require 'includes/sys_funcs-inc.php';
+\$conexao = new ConexaoMauser(\$_SESSION['base']);
+
+// Extrair valores em variaveis \$
+extract( \$_SESSION );
+extract( \$_GET );
+?>
+]]></content>
+    <tabTrigger>mauserhead</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Notabox Mauser"…"</description>
+</snippet>

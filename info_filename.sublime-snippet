@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[<?${TM_PHP_OPEN_TAG_WITH_ECHO:}=info_filename();?>'>]]></content>
+    <tabTrigger>infof</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Nome do Arquivo Atual"…"</description>
+</snippet>

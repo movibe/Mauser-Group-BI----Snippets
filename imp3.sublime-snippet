@@ -1,0 +1,15 @@
+<snippet>
+  <!-- Example: Hello, \${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+<? 
+  for (\$i=0; \$i < count(\$impostos_tabela[\$imposto]['colunas']); \$i++) { 
+      ?><th class="sorting" aria-sort="ASC" aria-label="<?=\$impostos_tabela[\$imposto]['valores'][\$i]?>"><?=\$impostos_tabela[\$imposto]['colunas'][\$i]?></th><?
+  }
+?>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>imp3</tabTrigger>
+  <description>Imposto 3</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

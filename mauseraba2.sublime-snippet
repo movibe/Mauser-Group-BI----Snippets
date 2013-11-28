@@ -1,0 +1,68 @@
+<snippet>
+    <content><![CDATA[<?
+/**
+ * MAUSER GROUP BRASIL
+ *
+ * @copyright Mauser Group
+ * @license Comercial
+ *
+ * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
+ * @package Mauser BI 2.0
+ */
+
+// Requires
+require 'includes/session_security-inc.php';
+require 'includes/sys_funcs-inc.php';
+\$conexao = new ConexaoMauser(\$_SESSION['base']);
+require "$1_functions.php";
+
+// Define Left Menu in DB
+\$_SESSION['menu']='$2';
+
+// Extracts
+extract( \$_SESSION );
+extract( \$_GET );
+
+// Ativar menu esquerdo
+\$sidetap = true;
+
+// Page Title
+\$header_subtitle = "$3";
+
+// Create Interface Header
+require DIR."header.php";
+
+// Create BreadCrumb Array 
+\$menu = array(
+	"Home"=> "/",
+	"$4 Report"=> "reports/$5/",
+	"Dashboard"=> "reports/$6/$7_00.php",
+	"\$header_subtitle"=> ""
+);
+
+// Function Create BreadCrumb
+gerBread( \$menu );
+?>
+<!-- Header Page -->
+<h3 class="heading"><?=\$header_subtitle?> <? include '$8_subtitle.php'; ?></h3>
+<!-- Tabs no Ajax -->
+<ul class="mytabs" id="tabs1">
+	<li <?=tab(0,\$aba);?>><a href="#tab1">teste</a></li>
+	<li <?=tab(1,\$aba);?>><a href="#tab3">Rights for Access</a>
+	<li <?=tab(2,\$aba);?>><a href="#tab2">Groups for Acess</a></li>
+	</li>
+</ul>
+
+<div class="mytabs-container tab1 tabs" id="tab1">tab1</div>
+<div class="mytabs-container tab2 tabs" id="tab2">tab2</div>
+<div class="mytabs-container tab3 tabs retorno" id="tab3">b</div>
+
+<?
+// End Interface Footer
+require DIR . 'footer.php';
+?>
+]]></content>
+    <tabTrigger>mauseraba2</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Tab Mauser"…"</description>
+</snippet>

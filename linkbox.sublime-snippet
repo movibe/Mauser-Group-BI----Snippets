@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[linkbox(${1:\$url},${2:\$label});]]></content>
+    <tabTrigger>linkbox</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Função Linkbox Mauser"…"</description>
+</snippet>
