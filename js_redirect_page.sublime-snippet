@@ -1,0 +1,13 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+function redirectPage() {
+        window.location = linkLocation;
+    }
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>js_redirect_page</tabTrigger>
+  <description>JS Redirecionar Pagina </description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js, meta.function.js, storage.type.function.js</scope>
+</snippet>

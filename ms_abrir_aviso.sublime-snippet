@@ -1,0 +1,35 @@
+<snippet>
+  <!-- Example: Hello, \${1:this} is a \${2:snippet}. -->
+  <content><![CDATA[
+function abrirAviso() {
+        \$('.container').addClass("blur");
+        \$('<div id="timeout-loading"></div>')
+            .appendTo('body')
+            .dialog({
+                modal: true,
+                width: '150px',
+                minHeight: 'auto',
+                zIndex: 10000,
+                closeOnEscape: false,
+                draggable: false,
+                resizable: false,
+                show: {
+                    effect: 'fade',
+                    duration: 500
+                },
+                hide: {
+                    effect: 'fade',
+                    duration: 500
+                },
+                dialogClass: 'timeout-loading',
+                title: '<img src="' + \$.cookie('URL') + 'images/mauser_mini.jpg"><img src="' + \$.cookie('URL') + 'images/loading2.gif" width="100">'
+
+            });
+    }
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ms_abrir_aviso</tabTrigger>
+  <description>Mauser JS Abrir Aviso</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js, meta.function.js, storage.type.function.js</scope>
+</snippet>

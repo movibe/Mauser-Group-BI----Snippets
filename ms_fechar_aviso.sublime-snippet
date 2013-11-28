@@ -1,0 +1,17 @@
+<snippet>
+  <!-- Example: Hello, \${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+function fecharAviso() {
+        \$('.container').removeClass("blur");
+        if (\$("#timeout-loading").length) {
+            \$(this).dialog("close");
+            \$('#timeout-loading').remove();
+        }
+    }
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ms_fechar_aviso</tabTrigger>
+  <description>Mauser Fechar Aviso</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js, meta.function.js, storage.type.function.js</scope>
+</snippet>
