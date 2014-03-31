@@ -1,6 +1,6 @@
 <snippet>
   <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
-  <content><![CDATA[mysql_update(${1:tabela}, \$${2:\array}, "${3:where}", ${4:debug=false})]]></content>
+  <content><![CDATA[\$conexao->mysql_update(${1:tabela}, \$${2:\array}, "${3:where}", ${4:debug=false})]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>mysql_update</tabTrigger>
   <description>Mysql Update</description>
