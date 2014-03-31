@@ -1,0 +1,10 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[//Notificar por Email
+notificar(${1:\$de}, ${2:\$para}, ${3:\$subject}, ${4:\$mensagem} );]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>notificar</tabTrigger>
+  <description>Notificar por email</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

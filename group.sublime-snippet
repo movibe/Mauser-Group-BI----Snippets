@@ -1,0 +1,19 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+<!-- ${1:nome} -->
+<div class="control-group  ">
+  <label class="control-label">${2:Field}:</label>
+  <div class="controls">
+    <div class="input">
+      ${3:Value}
+    </div>
+  </div>
+</div>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>group</tabTrigger>
+  <description>HTML Group</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

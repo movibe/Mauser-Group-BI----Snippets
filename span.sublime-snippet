@@ -1,0 +1,13 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[<div class="span${1:}">
+	<label for="">${2:Label}:</label>
+	${3:<input type="text" class="input-${4:class} " id="${5:id}">}
+</div>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>spanf</tabTrigger>
+  <description>Montar Form</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

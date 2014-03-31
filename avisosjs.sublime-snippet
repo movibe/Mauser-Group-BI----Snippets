@@ -1,0 +1,45 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+function abrirAviso() {
+ 		\$( '.container' ).addClass( 'blur' );
+ 		\$( '.main_content' ).addClass( 'blur' );
+ 		\$( '<div id="timeout-loading"></div>' )
+ 			.appendTo( 'body' )
+ 			.dialog( {
+ 				modal: true,
+ 				width: '150px',
+ 				minHeight: 'auto',
+ 				zIndex: 10000,
+ 				closeOnEscape: false,
+ 				draggable: false,
+ 				resizable: false,
+ 				// show: {
+ 				//        effect: 'fade',
+ 				//        duration: 500
+ 				//    },
+ 				//    hide: {
+ 				//        effect: 'fade',
+ 				//        duration: 500
+ 				//    },
+ 				dialogClass: 'timeout-loading',
+ 				title: '<img src="' + \$.cookie( 'URL' ) + 'images/mauser_mini.jpg"><img src="' + \$.cookie( 'URL' ) + 'images/loading2.gif" width="100">'
+
+ 			} );
+ 	}
+
+ 	function fecharAviso() {
+ 		if ( \$( "#timeout-loading" ).length ) {
+ 			// \$( this ).dialog( "close" );
+ 			\$( '#timeout-loading' ).remove();
+ 			\$( '.container' ).removeClass( 'blur' );
+ 			\$( '.main_content' ).removeClass( 'blur' );
+ 		}
+ 	}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>avisosjs</tabTrigger>
+  <description>Avisos em Js</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

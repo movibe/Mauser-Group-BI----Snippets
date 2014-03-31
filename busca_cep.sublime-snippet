@@ -1,0 +1,22 @@
+<snippet>
+  <!-- Example: Hello, \${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[\$('input[name="${1:campo}"]').blur(function(){
+		
+		var cep = \$.trim(\$(this).val().replace('-', ''));
+
+		\$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+cep, function(){
+			if(resultadoCEP["resultado"] == "1"){
+				\$('input[name="${3:rua}"]').val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
+				\$('input[name="${4:cidade}"]').val(unescape(resultadoCEP["cidade"]));
+				\$('input[name="${5:estado}"]').val(unescape(resultadoCEP["uf"]));
+				\$('input[name=${6:rua}]').focus();
+
+			}
+		});
+	});]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>busca_cep</tabTrigger>
+  <description>Buscar cep em ajax</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

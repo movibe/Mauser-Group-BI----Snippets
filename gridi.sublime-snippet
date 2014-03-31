@@ -1,0 +1,13 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[<div class="grid-${1:1}-${2:2}">
+  <label>${3:Nome} ${4:<em class="formee-req">*</em>}</label>
+  <input type="text" value="" ${5:placeholder="${6:Placeholder}"}>
+</div>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>gridi</tabTrigger>
+  <description>Grid input</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>
