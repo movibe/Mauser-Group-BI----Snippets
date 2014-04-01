@@ -1,0 +1,22 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[// Moedas
+\$( '.moeda' ).priceFormat( {
+  prefix: 'R\$ ',
+  centsSeparator: ',',
+  thousandsSeparator: '.',
+  limit: ${1:false},
+  centsLimit: 2,
+  clearPrefix: ${2:false},
+  clearSufix: ${3:false},
+  allowNegative: ${4:false},
+  insertPlusSign: ${5:false},
+  clearOnEmpty:${6:false}
+} );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>priceformat</tabTrigger>
+  <description>Priceformat para Moeda</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>
