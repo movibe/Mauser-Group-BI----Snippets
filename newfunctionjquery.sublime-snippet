@@ -1,0 +1,18 @@
+<snippet>
+  <!-- Example: Hello, \${1:this} is a \${2:snippet}. -->
+  <content><![CDATA[( function ( window, \$, undefined ) {
+  	//Versão
+	var VERSION = '1.0';
+	
+	// Funções
+	\$.fn.${1:funcao} = function () {
+		${2://codigo}
+	}
+
+} )( window, jQuery );]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>newfunctionjquery</tabTrigger>
+  <description>Function Jquery</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>
