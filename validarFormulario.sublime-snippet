@@ -1,0 +1,14 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[// Validar Formulario usando fnValidarFormulario.js
+var validacao = \$.fn.validarFormulario();
+if ( validacao == false ) {
+	return false;
+};
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>validarFormulario</tabTrigger>
+  <description>fnValidarFormulario usando AnimateCss</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>
