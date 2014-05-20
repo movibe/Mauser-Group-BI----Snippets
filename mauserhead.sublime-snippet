@@ -11,8 +11,8 @@
  */
 
 
-require 'includes/session_security-inc.php';
-require 'includes/sys_funcs-inc.php';
+require '../../includes/session_security-inc.php';
+require DIR . 'includes/sys_funcs-inc.php';
 \$conexao = new ConexaoMauser(\$_SESSION['base']);
 
 // Extrair valores em variaveis \$
