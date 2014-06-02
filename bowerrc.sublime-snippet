@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[{
+	"directory" : "${1:path}"
+}]]></content>
+    <tabTrigger>bowerrc</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Pasta para instalação do Bower</description>
+</snippet>
