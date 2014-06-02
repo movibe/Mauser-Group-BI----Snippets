@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[\$${1:objeto} = \$conexao->object("${1:Query}");]]></content>
+    <content><![CDATA[\$${1:objeto} = \$conexao->object("${2:Query}");]]></content>
     <tabTrigger>object</tabTrigger>
     <scope>source.php</scope> 
     <description>SQL Conexão Mauser"…"</description>
