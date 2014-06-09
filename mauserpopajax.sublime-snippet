@@ -49,7 +49,7 @@ gerBread( json_encode(\$caminho) );
 <?
 require DIR. 'footer_pop.php';
 ?>]]></content>
-    <tabTrigger>mauserpop2</tabTrigger>
-    <!-- <scope>source.php</scope> --> 
+    <tabTrigger>mauserpop-ajax</tabTrigger>
+    <scope>source.php</scope> 
     <description>Função Notabox Mauser"…"</description>
 </snippet>
