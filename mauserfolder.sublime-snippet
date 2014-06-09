@@ -12,6 +12,7 @@
 
 require '../../includes/session_security-inc.php';
 require DIR . 'includes/sys_funcs-inc.php';
+
 // Inicia conexão
 \$conexao = new ConexaoMauser( \$_SESSION['base'] );
 require "${1:pr}_functions.php";
@@ -26,14 +27,14 @@ if ( !\$coluna=='' ) {
 	\$orderby = "ORDER BY TOTAL DESC";
 }
 }
-
-\$sql2 = " ${2:SELECT}
+// QUERY
+\$sql = " ${2:SELECT}
 \$orderby";
 
-foreach (${3:\$progs} AS ${4:\$prog})
+foreach ($conexao->object($sql) AS ${3:\$prog})
 ?>
 	<tr  class="filho <?=\$folder?>" >
-		${5:td}
+		${4:td}
 	</tr>
 <?
 }
