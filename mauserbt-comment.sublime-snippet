@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[<div id="historico-<?=\$i?>" class="hide historico">
+	<h2>Comentário</h2>
+	<div class="row">
+		${1:codigo}
+	</div> 
+</div>
+<a href="#historico-<?=\$i?>" class="btn btn-info fpop"><i class="icon icon-white icon-list-alt"></i></a>]]></content>
+    <tabTrigger>mauserbt-comment</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>Botão de Comentário</description>
+</snippet>
