@@ -1,0 +1,45 @@
+<snippet>
+    <content><![CDATA[<?
+/**
+ * MAUSER GROUP BRASIL
+ *
+ * @copyright Mauser Group
+ * @license Comercial
+ *
+ * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
+ * @package Mauser BI 2.0
+ */
+
+require '../../includes/session_security-inc.php';
+require DIR . 'includes/sys_funcs-inc.php';
+// Inicia conexão
+\$conexao = new ConexaoMauser( \$_SESSION['base'] );
+require "${1:pr}_functions.php";
+
+extract( \$_SESSION );
+extract( \$_GET );
+
+// Order by passando do programa anterior
+if ( !\$coluna=='' ) {
+	\$orderby = "ORDER BY \$coluna \$ordem";
+} else {
+	\$orderby = "ORDER BY TOTAL DESC";
+}
+}
+
+\$sql2 = " ${2:SELECT}
+\$orderby";
+
+foreach (${3:\$progs} AS ${4:\$prog})
+?>
+	<tr  class="filho <?=\$folder?>" >
+		${5:td}
+	</tr>
+<?
+}
+?>
+]]></content>
+    <tabTrigger>mauserfolder</tabTrigger>
+    <!-- <scope>source.php</scope> --> 
+    <description>SQL Conexão Mauser"…"</description>
+</snippet>
